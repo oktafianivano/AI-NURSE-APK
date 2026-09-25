@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.chatpasiencontroller">
+    <children>
+        <Pane maxHeight="550.0" maxWidth="600.0" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <Label layoutX="140.0" layoutY="35.0" text="💬 ASISTEN KESEHATAN AI" textFill="#d81b60">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <TextArea fx:id="txtRiwayatChat" editable="false" layoutX="40.0" layoutY="85.0" prefHeight="330.0" prefWidth="520.0" style="-fx-control-inner-background: #F4F6F9; -fx-background-radius: 10; -fx-border-color: #e0e0e0; -fx-border-radius: 10;" wrapText="true">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextArea>
+
+                <TextField fx:id="txtPesan" layoutX="40.0" layoutY="430.0" onAction="#kirimPesan" prefHeight="45.0" prefWidth="410.0" promptText="Ketik keluhan medis Anda di sini..." style="-fx-background-color: #F4F6F9; -fx-background-radius: 10; -fx-border-color: #e0e0e0; -fx-border-radius: 10;" />
+
+                <Button layoutX="460.0" layoutY="430.0" mnemonicParsing="false" onAction="#kirimPesan" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #d81b60; -fx-text-fill: white; -fx-background-radius: 10;" text="Kirim 🚀">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+
+                <Button layoutX="40.0" layoutY="490.0" mnemonicParsing="false" onAction="#kembali" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 10;" text="← Kembali">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</StackPane>

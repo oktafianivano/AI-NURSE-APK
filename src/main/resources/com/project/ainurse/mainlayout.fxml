@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #FAD5E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.menuutama">
+    <children>
+
+
+
+        <StackPane fx:id="areaTengah" style="-fx-background-color: transparent;" />
+    </children>
+</StackPane>

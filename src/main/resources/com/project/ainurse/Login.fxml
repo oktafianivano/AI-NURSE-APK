@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.logincontroller">
+    <children>
+
+
+        <VBox alignment="CENTER" maxHeight="400.0" maxWidth="400.0" spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <padding>
+                <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+            </padding>
+            <children>
+                <Label text="LOGIN PERAWAT" textFill="#d81b60">
+                    <font><Font name="System Bold" size="24.0" /></font>
+                    <VBox.margin><Insets bottom="10.0" /></VBox.margin>
+                </Label>
+
+                <Label fx:id="lblError" text="Username atau Password salah!" textFill="RED" visible="false">
+                    <font><Font name="System Bold" size="12.0" /></font>
+                </Label>
+
+
+                <TextField fx:id="txtUsername" prefHeight="40.0" promptText="Username" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+
+
+                <StackPane>
+                    <children>
+                        <TextField fx:id="txtPasswordVisible" prefHeight="40.0" promptText="Password" visible="false" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+                        <PasswordField fx:id="txtPassword" prefHeight="40.0" promptText="Password" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+                    </children>
+                </StackPane>
+
+
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <CheckBox fx:id="chkShowPassword" mnemonicParsing="false" onAction="#togglePassword" text="Tampilkan Password" textFill="#2c3e50">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </CheckBox>
+                    </children>
+                </HBox>
+
+
+                <Button mnemonicParsing="false" onAction="#prosesLogin" prefHeight="40.0" prefWidth="320.0" style="-fx-background-color: rgba(216, 27, 96, 0.9); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="MASUK">
+                    <VBox.margin><Insets top="10.0" /></VBox.margin>
+                </Button>
+
+
+                <Button mnemonicParsing="false" onAction="#kembaliKeMenu" prefHeight="40.0" prefWidth="320.0" style="-fx-background-color: rgba(255, 255, 255, 0.5); -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-border-color: rgba(44, 62, 80, 0.5); -fx-border-radius: 5;" text="Kembali" />
+            </children>
+        </VBox>
+    </children>
+</StackPane>

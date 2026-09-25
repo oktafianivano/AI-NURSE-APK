@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="250.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 0 2 0 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.sidebarcontroller">
+    <children>
+        <Label text="🏥 AI-NURSE" textFill="#d81b60">
+            <font><Font name="System Bold" size="24.0" /></font>
+            <VBox.margin><Insets bottom="30.0" left="20.0" top="20.0" /></VBox.margin>
+        </Label>
+
+        <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#keDashboard" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="   📊 Dashboard Utama" />
+
+        <Button fx:id="btnAskep" mnemonicParsing="false" onAction="#keAntreanAskep" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="   📋 Perlu Askep" />
+
+        <Button fx:id="btnRiwayat" mnemonicParsing="false" onAction="#keRiwayat" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="   📂 Riwayat Selesai" />
+
+        <Button fx:id="btnStatistik" mnemonicParsing="false" onAction="#keStatistik" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="   📈 Statistik Modern" />
+
+        <Button fx:id="btnChat" mnemonicParsing="false" onAction="#keChat" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-alignment: BASELINE_LEFT; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="   💬 Tanya AI Klinis" />
+
+        <Region VBox.vgrow="ALWAYS" />
+        <Button mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="210.0" style="-fx-background-color: rgba(192, 57, 43, 0.85); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Keluar (Logout)">
+            <VBox.margin><Insets bottom="20.0" left="20.0" right="20.0" /></VBox.margin>
+        </Button>
+    </children>
+</VBox>

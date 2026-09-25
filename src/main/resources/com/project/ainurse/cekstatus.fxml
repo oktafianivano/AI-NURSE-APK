@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.cekstatuscontroller">
+    <children>
+        <Pane maxHeight="550.0" maxWidth="500.0" prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <Label layoutX="90.0" layoutY="40.0" text="🔍 CEK STATUS &amp; ANTREAN" textFill="#d81b60">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="60.0" layoutY="80.0" text="Pantau posisi antrean dan hasil triase Anda secara real-time." textFill="GRAY">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <TextField fx:id="txtCari" layoutX="40.0" layoutY="120.0" prefHeight="45.0" prefWidth="300.0" promptText="Ketik Nama Lengkap atau No RM..." style="-fx-background-color: #F4F6F9; -fx-background-radius: 10; -fx-border-color: #e0e0e0; -fx-border-radius: 10;" />
+                <Button layoutX="350.0" layoutY="120.0" mnemonicParsing="false" onAction="#cariStatus" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #d81b60; -fx-text-fill: white; -fx-background-radius: 10;" text="Cari">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+
+                <Pane layoutX="40.0" layoutY="180.0" prefHeight="270.0" prefWidth="420.0" style="-fx-background-color: #FCE4EC; -fx-background-radius: 15; -fx-border-color: #f8bbd0; -fx-border-radius: 15;">
+                    <children>
+
+
+                        <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="400.0" style="-fx-background: #FCE4EC; -fx-background-color: transparent; -fx-border-color: transparent;">
+                            <content>
+
+                                <Label fx:id="lblHasil" prefWidth="380.0" text="Silakan masukkan Nama Lengkap atau Nomor RM Anda pada kolom di atas." wrapText="true">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </Pane>
+
+                <Button layoutX="40.0" layoutY="470.0" mnemonicParsing="false" onAction="#kembali" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 10;" text="← Kembali">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnPdf" layoutX="260.0" layoutY="470.0" mnemonicParsing="false" onAction="#cetakPDF" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-background-radius: 10;" text="📄 Cetak PDF" visible="false">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</StackPane>

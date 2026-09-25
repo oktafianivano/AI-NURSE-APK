@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.dashboardperawatcontroller">
+
+
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+
+
+    <center>
+        <VBox fx:id="kontenUtama" spacing="15.0" BorderPane.alignment="CENTER">
+            <padding><Insets bottom="20.0" left="30.0" right="30.0" top="20.0" /></padding>
+            <children>
+
+
+                <BorderPane style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-padding: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                    <left>
+                        <Label text="Dashboard Antrean Aktif" textFill="#2c3e50" BorderPane.alignment="CENTER">
+                            <font><Font name="System Bold" size="28.0" /></font>
+                            <padding><Insets left="10.0" /></padding>
+                        </Label>
+                    </left>
+                    <right>
+                        <Label fx:id="lblNamaPerawat" text="👤 Nama Perawat" textFill="#2c3e50" BorderPane.alignment="CENTER">
+                            <font><Font name="System Bold" size="16.0" /></font>
+                            <padding><Insets right="10.0" /></padding>
+                        </Label>
+                    </right>
+                </BorderPane>
+
+
+                <HBox spacing="15.0">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <padding><Insets bottom="15.0" left="20.0" right="20.0" top="15.0" /></padding>
+                            <children>
+                                <Label text="Antrean Menunggu" textFill="#2c3e50">
+                                    <font><Font name="System Bold" size="13.0" /></font>
+                                </Label>
+                                <Label fx:id="lblCountMenunggu" text="0" textFill="#2c3e50"><font><Font name="System Bold" size="36.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <padding><Insets bottom="15.0" left="20.0" right="20.0" top="15.0" /></padding>
+                            <children>
+                                <Label text="Sedang Ditangani" textFill="#3498db">
+                                    <font><Font name="System Bold" size="13.0" /></font>
+                                </Label>
+                                <Label fx:id="lblCountDitangani" text="0" textFill="#3498db"><font><Font name="System Bold" size="36.0" /></font></Label>
+                            </children>
+                        </VBox>
+
+                        <VBox prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: rgba(216, 27, 96, 0.75); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <padding><Insets bottom="15.0" left="20.0" right="20.0" top="15.0" /></padding>
+                            <children>
+                                <Label text="Gawat Darurat (Aktif)" textFill="WHITE">
+                                    <font><Font name="System Bold" size="13.0" /></font>
+                                </Label>
+                                <Label fx:id="lblCountGawat" text="0" textFill="WHITE"><font><Font name="System Bold" size="36.0" /></font></Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-padding: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                    <children>
+                        <Label text="Registrasi:" textFill="#d81b60"><font><Font name="System Bold" size="14.0" /></font></Label>
+                        <TextField fx:id="txtNamaBaru" prefWidth="120.0" promptText="Nama Pasien" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5;" />
+                        <TextField fx:id="txtUsiaBaru" prefWidth="60.0" promptText="Usia" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5;" />
+                        <TextField fx:id="txtSuhuBaru" prefWidth="60.0" promptText="Suhu" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5;" />
+                        <TextField fx:id="txtKeluhanBaru" promptText="Keluhan..." HBox.hgrow="ALWAYS" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5;" />
+                        <Button mnemonicParsing="false" onAction="#tambahPasienBaru" style="-fx-background-color: rgba(216, 27, 96, 0.9); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="+ Tambah" />
+
+                        <Region prefWidth="20.0" />
+
+                        <ComboBox fx:id="cbStatusUpdate" prefWidth="150.0" promptText="Ubah Status..." style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 5;" />
+                        <Button mnemonicParsing="false" onAction="#prosesUpdateStatus" style="-fx-background-color: rgba(41, 128, 185, 0.9); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="Update" />
+                        <Label fx:id="lblNotifSukses" text="Sukses!" textFill="#27ae60" visible="false">
+                            <font><Font name="System Bold" size="12.0" /></font>
+                        </Label>
+                    </children>
+                </HBox>
+
+
+                <TableView fx:id="tabelPasien" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colRm" prefWidth="80.0" text="No. RM" />
+                        <TableColumn fx:id="colNama" prefWidth="120.0" text="Nama Pasien" />
+                        <TableColumn fx:id="colUsia" prefWidth="50.0" text="Usia" />
+                        <TableColumn fx:id="colSuhu" prefWidth="50.0" text="Suhu" />
+                        <TableColumn fx:id="colKeluhan" prefWidth="250.0" text="Keluhan..." />
+                        <TableColumn fx:id="colTriase" prefWidth="300.0" text="Hasil Triase" />
+                        <TableColumn fx:id="colStatus" prefWidth="150.0" text="Status Aktif" />
+                    </columns>
+                </TableView>
+
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

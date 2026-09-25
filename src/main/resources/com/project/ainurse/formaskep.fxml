@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.formaskepcontroller">
+
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <padding><Insets left="30.0" right="30.0" /></padding>
+            <children>
+
+                <Button mnemonicParsing="false" onAction="#kembaliKeRiwayat" style="-fx-background-color: rgba(255, 255, 255, 0.5); -fx-border-color: rgba(44, 62, 80, 0.5); -fx-border-radius: 5; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="&lt;- Kembali" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Label text="FORM ASUHAN KEPERAWATAN (SDKI &amp; SIKI)" textFill="#d81b60">
+                    <font><Font name="System Bold" size="20.0" /></font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+            </children>
+            <BorderPane.margin>
+
+                <Insets top="15.0" left="15.0" right="15.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20.0">
+            <padding><Insets bottom="30.0" left="150.0" right="150.0" top="30.0" /></padding>
+            <children>
+
+
+                <VBox spacing="5.0" style="-fx-background-color: rgba(252, 228, 236, 0.7); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-padding: 20;">
+                    <children>
+                        <Label fx:id="lblNamaRm" text="Nama: - | No. RM: - | Usia: -" textFill="#2c3e50">
+                            <font><Font name="System Bold" size="16.0" /></font>
+                        </Label>
+                        <Label fx:id="lblKeluhan" text="Keluhan: -" textFill="#2c3e50" />
+
+                        <Label fx:id="lblTriase" text="Triase AI: -" textFill="#d81b60" wrapText="true" minHeight="-Infinity" prefWidth="900.0">
+                            <font><Font name="System Bold" size="14.0" /></font>
+                        </Label>
+                    </children>
+                </VBox>
+
+
+                <VBox spacing="20.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+
+
+                    <padding>
+                        <Insets top="30.0" right="30.0" bottom="30.0" left="30.0" />
+                    </padding>
+
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                            <Label text="1. Pilihan Diagnosis SDKI:" textFill="#2c3e50"><font><Font name="System Bold" size="14.0" /></font></Label>
+                            <ComboBox fx:id="cbDiagnosis" prefWidth="400.0" promptText="Pilih Diagnosis SDKI..." style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+                        </HBox>
+
+                        <Separator />
+
+                        <HBox alignment="TOP_LEFT" spacing="20.0">
+                            <Label text="Intervensi Utama:" textFill="#2c3e50"><font><Font name="System Bold" size="14.0" /></font></Label>
+                            <VBox spacing="10.0">
+                                <children>
+                                    <Label fx:id="lblIntervensiUtama" text="Pilih diagnosis terlebih dahulu..." textFill="#d81b60"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                    <CheckBox fx:id="chkObservasi" text="[O] Observasi gejala dan tanda klinis pasien" textFill="#2c3e50" />
+                                    <CheckBox fx:id="chkTerapeutik" text="[T] Terapeutik: Berikan lingkungan yang nyaman dan fasilitasi istirahat" textFill="#2c3e50" />
+                                    <CheckBox fx:id="chkEdukasi" text="[E] Edukasi: Jelaskan prosedur dan tujuan intervensi" textFill="#2c3e50" />
+                                    <CheckBox fx:id="chkKolaborasi" text="[K] Kolaborasi: Pemberian tindakan medis atau obat sesuai resep" textFill="#2c3e50" />
+                                </children>
+                            </VBox>
+                        </HBox>
+
+                        <Separator />
+
+
+                        <TextArea fx:id="txtEvaluasi" prefHeight="100.0" promptText="Ketik evaluasi perkembangan pasien di sini..." style="-fx-control-inner-background: rgba(255, 255, 255, 0.8); -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+
+                        <Button mnemonicParsing="false" onAction="#simpanAskep" prefHeight="45.0" maxWidth="Infinity" style="-fx-background-color: rgba(216, 27, 96, 0.9); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="💾 SIMPAN ASKEP KE DATABASE">
+                            <font><Font size="14.0" /></font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

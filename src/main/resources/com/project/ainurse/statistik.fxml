@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.statistikcontroller">
+
+
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+
+
+    <center>
+        <VBox spacing="20.0" BorderPane.alignment="CENTER">
+            <padding><Insets bottom="30.0" left="40.0" right="40.0" top="30.0" /></padding>
+            <children>
+
+                <Label text="Statistik &amp; Analitik IGD" textFill="#2c3e50">
+                    <font><Font name="System Bold" size="28.0" /></font>
+                </Label>
+                <Label text="Laporan visual distribusi tingkat kegawatan pasien secara real-time." textFill="GRAY" />
+
+
+                <HBox spacing="20.0">
+                    <children>
+
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e74c3c; -fx-border-width: 0 0 0 5; -fx-border-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                            <Label text="KODE MERAH (Darurat)" textFill="GRAY"><font><Font name="System Bold" size="14.0" /></font></Label>
+                            <Label fx:id="lblMerah" text="0" textFill="#e74c3c"><font><Font name="System Bold" size="36.0" /></font></Label>
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #f1c40f; -fx-border-width: 0 0 0 5; -fx-border-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                            <Label text="KODE KUNING (Mendesak)" textFill="GRAY"><font><Font name="System Bold" size="14.0" /></font></Label>
+                            <Label fx:id="lblKuning" text="0" textFill="#f39c12"><font><Font name="System Bold" size="36.0" /></font></Label>
+                        </VBox>
+
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2ecc71; -fx-border-width: 0 0 0 5; -fx-border-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                            <Label text="KODE HIJAU (Ringan)" textFill="GRAY"><font><Font name="System Bold" size="14.0" /></font></Label>
+                            <Label fx:id="lblHijau" text="0" textFill="#27ae60"><font><Font name="System Bold" size="36.0" /></font></Label>
+                        </VBox>
+                    </children>
+                </HBox>
+
+
+                <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" VBox.vgrow="ALWAYS">
+                    <padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /></padding>
+                    <children>
+                        <PieChart fx:id="chartTriase" title="Persentase Status Triase AI" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

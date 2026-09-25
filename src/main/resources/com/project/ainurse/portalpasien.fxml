@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.portalpasiencontroller">
+    <children>
+        <Pane maxHeight="430.0" maxWidth="450.0" prefHeight="430.0" prefWidth="450.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <Label layoutX="0.0" layoutY="45.0" prefWidth="450.0" alignment="CENTER" text="🏥 PORTAL PASIEN MANDIRI" textFill="#d81b60">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="60.0" layoutY="85.0" text="Pilih layanan mandiri yang Anda butuhkan di bawah ini" textFill="GRAY" />
+
+                <Button layoutX="50.0" layoutY="130.0" mnemonicParsing="false" onAction="#bukaFormDaftar" prefHeight="55.0" prefWidth="350.0" style="-fx-background-color: #FCE4EC; -fx-text-fill: #d81b60; -fx-background-radius: 15;" text="📝 Pendaftaran Antrean Baru">
+                    <font><Font name="System Bold" size="15.0" /></font>
+                </Button>
+
+                <Button layoutX="50.0" layoutY="200.0" mnemonicParsing="false" onAction="#bukaCekStatus" prefHeight="55.0" prefWidth="350.0" style="-fx-background-color: #FCE4EC; -fx-text-fill: #d81b60; -fx-background-radius: 15;" text="🔍 Cek Status &amp; Waktu Tunggu">
+                    <font><Font name="System Bold" size="15.0" /></font>
+                </Button>
+
+                <Button layoutX="50.0" layoutY="270.0" mnemonicParsing="false" onAction="#bukaChatAI" prefHeight="55.0" prefWidth="350.0" style="-fx-background-color: #FCE4EC; -fx-text-fill: #d81b60; -fx-background-radius: 15;" text="💬 Konsultasi AI Asisten Kesehatan">
+                    <font><Font name="System Bold" size="15.0" /></font>
+                </Button>
+
+                <Button layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#kembaliKeMenuUtama" prefHeight="45.0" prefWidth="350.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 15;" text="← Kembali ke Menu Utama">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</StackPane>

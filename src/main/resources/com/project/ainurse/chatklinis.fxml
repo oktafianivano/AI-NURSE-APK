@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: rgba(255, 255, 255, 0.45); -fx-background-radius: 15; -fx-border-color: rgba(255, 255, 255, 0.8); -fx-border-width: 2; -fx-border-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ainurse.controller.chatkliniscontroller">
+
+
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+
+
+    <center>
+        <VBox spacing="15.0" BorderPane.alignment="CENTER">
+            <padding><Insets bottom="30.0" left="40.0" right="40.0" top="30.0" /></padding>
+            <children>
+                <Label text="Asisten Medis Pintar (AI)" textFill="#2c3e50">
+                    <font><Font name="System Bold" size="28.0" /></font>
+                </Label>
+
+
+                <Label fx:id="lblStatus" text="🟢 AI Siap Membantu" textFill="#27ae60">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Label>
+
+
+                <TextArea fx:id="txtAreaChat" editable="false" prefHeight="450.0" promptText="Mulai percakapan medis Anda di sini..." style="-fx-font-size: 15px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" VBox.vgrow="ALWAYS" wrapText="true" />
+
+
+                <HBox spacing="10.0">
+                    <children>
+                        <TextField fx:id="txtInputPesan" onAction="#kirimPesan" prefHeight="50.0" promptText="Tanyakan sesuatu (Contoh: Apa penanganan pertama untuk pasien asma?)" style="-fx-font-size: 15px; -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#kirimPesan" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #d81b60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" text="KIRIM ➔" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
