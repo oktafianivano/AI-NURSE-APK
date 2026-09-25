@@ -35,7 +35,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/USERNAME_LU/AI-NURSE-APK.git
+   git clone https://github.com/oktafianivano/AI-NURSE-APK.git
    cd AI-NURSE-APK
    ```
 
